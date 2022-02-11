@@ -37,6 +37,11 @@ const Category = () => {
                     <View style={styles.buttonStyle}>  
                         <Text style={styles.buttonText}>General</Text>  
                     </View>  
+                </TouchableHighlight>
+                <TouchableHighlight underlayColor="white">  
+                    <View style={styles.buttonStyle}>  
+                        <Text style={styles.buttonText}>Comedy</Text>  
+                    </View>  
                 </TouchableHighlight> 
         </ScrollView>
         <View

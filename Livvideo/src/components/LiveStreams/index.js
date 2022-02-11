@@ -1,17 +1,31 @@
 import React from 'react';
-import styles from './styles';
+import {View, StyleSheet, Dimensions} from 'react-native';
 
 import Video from 'react-native-video';
 
 
-const LiveStream = () => {
-  <Video
-    source={{ uri: 'https://www.youtube.com/watch?v=rZ0TZCbMtDc&list=RDrZ0TZCbMtDc&start_radio=1' }}
-    style={{ width: 300, height: 300 }}
-    controls={true}
-    ref={(ref) => {
-      this.player = ref
-    }} />
-};
-export default LiveStream;
+const LiveStreams = () => {
+  return(
+<View style={{ width: "100%", height: "100%" }}>
+<Video
+        source={{
+          uri:
+            'http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+        }}
+        style={styles.video}
+        controls={true}
+        resizeMode={'cover'}
+      />
+    </View>
+  )
+  };
+
+  const styles = StyleSheet.create({
+    video: {
+      width: Dimensions.get('window').width,
+      height: Dimensions.get('window').height,
+      backgroundColor: 'black',
+    }
+  });
+export default LiveStreams;
 
